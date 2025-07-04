@@ -1,1 +1,1 @@
-参考: [maomao]()
+参考: [maomao](https://github.com/maomao1996/vitepress-nav-template)
