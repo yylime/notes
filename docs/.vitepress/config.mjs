@@ -7,12 +7,12 @@ import { head, nav, sidebar } from './configs'
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
-  outDir: '../dist',
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  outDir: "../dist",
+  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : "/",
 
-  lang: 'zh-CN',
-  title: '小林子的小屋',
-  description: '开始记录吧',
+  lang: "zh-CN",
+  title: "小林子的小屋",
+  description: "开始记录吧",
   head,
 
   lastUpdated: true,
@@ -27,57 +27,57 @@ export default defineConfig({
   themeConfig: {
     i18nRouting: false,
 
-    logo: '/logo.png',
+    logo: "/logo.png",
 
     nav,
     sidebar,
 
     /* 右侧大纲配置 */
     outline: {
-      level: 'deep',
-      label: '目录',
+      level: "deep",
+      label: "目录",
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/yylime' }],
+    socialLinks: [{ icon: "github", link: "https://github.com/yylime" }],
 
     footer: {
-      message: 'Made with ❤️ by yylime ｜ Powered by VitePress',
-      copyright: 'Copyright © 2025-present yylime',
+      message: "Made with ❤️ by yylime ｜ Powered by VitePress",
+      copyright: "Copyright © 2025-present yylime",
     },
 
     lastUpdated: {
-      text: '最后更新于',
+      text: "最后更新于",
       formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium',
+        dateStyle: "short",
+        timeStyle: "medium",
       },
     },
 
     docFooter: {
-      prev: '上一篇',
-      next: '下一篇',
+      prev: "上一篇",
+      next: "下一篇",
     },
 
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '菜单',
-    darkModeSwitchLabel: '主题',
-    lightModeSwitchTitle: '切换到浅色模式',
-    darkModeSwitchTitle: '切换到深色模式',
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "菜单",
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
 
     /*** 自定义配置 ***/
     visitor: {
-      badgeId: 'maomao1996.vitepress-nav-template',
+      badgeId: "yylime.notes",
     },
 
     comment: {
-      repo: 'yylime/vitepress-nav-template',
-      repoId: 'R_kgDOJC09Jg',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOJC09Js4Cekn0',
+      repo: "yylime/notes",
+      repoId: "R_kgDOPGr3hQ",
+      category: "Announcements",
+      categoryId: "DIC_kwDOPGr3hc4CsdwU",
     },
   },
 
   vite: {
     plugins: [MarkdownPreview()],
   },
-})
+});
