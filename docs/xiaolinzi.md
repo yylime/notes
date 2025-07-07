@@ -11,7 +11,9 @@ aside: false
 }
 </style>
 
-# 小林子 <Badge text="yylime" /> <Badge text="yylime1996" />
+# 小林子 <Badge text="yylime" />
+
+央企打工人，主要负责网络维护，以及网络自动化等相关工作～
 
 ```sh:no-line-numbers
 任何时候出发都不算太晚。

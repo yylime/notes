@@ -12,24 +12,24 @@ hero:
   actions:
     - theme: brand
       text: 网络自动化
-      link: /network/markdown-examples
+      link: /network/netmiko
     - theme: alt
       text: 随笔
-      link: /network/markdown-examples
+      link: /life/daily
 
 features:
   - icon: 📖
-    title: 前端物语
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: /fe/javascript/types
-    linkText: 前端常用知识
+    title: 网络自动化
+    details: 从netmiko入手，介绍常用的提取交换机信息的各种操作
+    link: /network/netmiko
+    linkText: 网络自动化常用
   - icon: 📘
     title: 源码阅读
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: /analysis/utils/only-allow
-    linkText: 源码阅读
+    link: /code/netmiko
+    linkText: 源码阅读（还没读）
   - icon: 💡
-    title: 吾志所向，一往无前。
+    title: 人的一生总是充满各种遗憾。
     details: '<small class="bottom-small">小林子</small>'
     link: /xiaolinzi
 ---

@@ -41,7 +41,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/yylime" }],
 
     footer: {
-      message: "Made with ❤️ by yylime ｜ Powered by VitePress",
+      message: "Made with ❤️ by yylime ｜ theme by maomao",
       copyright: "Copyright © 2025-present yylime",
     },
 
