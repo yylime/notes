@@ -1,7 +1,7 @@
 import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
-import { SpeedInsights } from "@vercel/speed-insights/vue"
+
 
 import { head, nav, sidebar } from './configs'
 

@@ -8,6 +8,7 @@ import { usePageId } from '../composables'
 
 import MNavVisitor from './MNavVisitor.vue'
 import MDocFooter from './MDocFooter.vue'
+import { SpeedInsights } from "@vercel/speed-insights/vue"
 
 const { Layout } = DefaultTheme
 const { isDark, theme, frontmatter } = useData()
@@ -95,6 +96,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       <MDocFooter />
     </template>
   </Layout>
+  <SpeedInsights />
 </template>
 
 <style>
