@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 随笔
       link: /life/daily
+    - theme: brand
+      text: VPS分享
+      link: /vps/bandwagon
 
 features:
   - icon: 📖

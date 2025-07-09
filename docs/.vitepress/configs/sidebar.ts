@@ -19,5 +19,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 { text: '个人感悟', link: '/life/reflection' }
             ]
         }
+    ],
+    '/vps/': [
+        {
+            text: 'VPS',
+            items: [
+                { text: 'bandwagon', link: '/vps/bandwagon' },
+                { text: 'V.PS', link: '/vps/vps' },
+                { text: 'VMISS', link: '/vps/vmiss' },
+            ]
+        }
     ]
 }
