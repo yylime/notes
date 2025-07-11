@@ -1,12 +1,12 @@
 # Netmiko
 
-从0开始学习netmiko，官方Github的[Getting Started](https://github.com/ktbyers/netmiko/tree/develop?tab=readme-ov-file#getting-started-1)。单位交换机数量高达2000+，手动对设备进行常规维护非常耗时，我解手的时候采用的shell脚本来对交换机进行配置保存，但效率低下多线程支持不友好，于是该用netmiko，也开启对netmiko的学习之路。本篇将主要讲述使用netmiko在日常工作中遇到的问题和解决方案（设计交换机型号为Huawei、Cisco_IOS, Cisco_NXOS, H3C）。
+从0开始学习netmiko，开始学习前建议浏览官方Github的[Getting Started](https://github.com/ktbyers/netmiko/tree/develop?tab=readme-ov-file#getting-started-1)。单位交换机数量高达2000+，手动对设备进行常规维护非常耗时，我接手的时候采用的shell脚本来对交换机进行配置保存，效率低下并且多线程支持不友好，于是改用netmiko，也开启对netmiko的学习之路。本篇将主要讲述使用netmiko在日常工作中遇到的问题和解决方案（涉及交换机型号为Huawei、Cisco_IOS, Cisco_NXOS, H3C）。
 
 ## 安装与使用
 ```sh
 pip install netmiko
 ```
-查看华为交换机配置的案例。更多的案例可以参考 [Netmiko Examples](https://github.com/ktbyers/netmiko/blob/develop/EXAMPLES.md)
+一个输出查看华为交换机当前配置的例子如下，更多的案例可以参考 [Netmiko Examples](https://github.com/ktbyers/netmiko/blob/develop/EXAMPLES.md)
 ```python
 from netmiko import ConnectHandler
 with ConnectHandler(device_type="huawei",
@@ -24,7 +24,7 @@ print(output)
 ```
 ## 常用功能
 
-netmiko 很多的数据提取会借助 [TextFSM](https://github.com/google/textfsm)，它可以有效的提取返回数据的格式化数据，netmiko集成3很多模板可以直接使用，模板来自[ntc-templates](https://github.com/networktocode/ntc-templates)，使用自带模板的一个案例如下：
+netmiko 很多的数据提取会借助 [TextFSM](https://github.com/google/textfsm)，它可以有效的提取返回数据的格式化数据，netmiko集成很多模板可以直接使用，模板来自[ntc-templates](https://github.com/networktocode/ntc-templates)，使用自带模板的一个案例如下：
 ```python
 from netmiko import ConnectHandler
 from pprint import pprint
