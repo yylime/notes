@@ -14,11 +14,12 @@ hero:
       text: 网络自动化
       link: /network/netmiko
     - theme: alt
+      text: VPS分享
+      link: /vps/list
+    - theme: brand
       text: 随笔
       link: /life/daily
-    - theme: brand
-      text: VPS分享
-      link: /vps/bandwagon
+
 
 features:
   - icon: 📖

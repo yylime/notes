@@ -24,6 +24,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
             text: 'VPS',
             items: [
+                { text: '汇总', link: '/vps/list' },
                 { text: 'bandwagon', link: '/vps/bandwagon' },
                 { text: 'V.PS', link: '/vps/vps' },
                 { text: 'VMISS', link: '/vps/vmiss' },
