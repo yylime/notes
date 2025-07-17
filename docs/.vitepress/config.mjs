@@ -28,6 +28,15 @@ export default defineConfig({
   themeConfig: {
     i18nRouting: false,
 
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'HP5FDHQ0BM',
+        apiKey: '99268d3678711a5ea33282c1285459e8',
+        indexName: '...'
+      }
+    },
+
     logo: "/logo.png",
 
     nav,

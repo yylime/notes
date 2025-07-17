@@ -64,6 +64,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
+  <meta name="algolia-site-verification"  content="D1E6B69349C46B2C" />
   <Layout v-bind="$attrs">
     <!--
       相关插槽
