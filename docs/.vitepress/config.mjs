@@ -29,12 +29,7 @@ export default defineConfig({
     i18nRouting: false,
 
     search: {
-      provider: 'algolia',
-      options: {
-        appId: 'HP5FDHQ0BM',
-        apiKey: '99268d3678711a5ea33282c1285459e8',
-        indexName: '...'
-      }
+      provider: 'local',
     },
 
     logo: "/logo.png",
@@ -74,10 +69,7 @@ export default defineConfig({
     lightModeSwitchTitle: "切换到浅色模式",
     darkModeSwitchTitle: "切换到深色模式",
 
-    sitemap: {
-      hostname: 'https://limelime.top'
-    },
-
+    
     /*** 自定义配置 ***/
     visitor: {
       badgeId: "yylime.notes",
@@ -90,6 +82,10 @@ export default defineConfig({
       categoryId: "DIC_kwDOPGr3hc4CsdwU",
     },
   },
+
+  sitemap: {
+      hostname: 'https://limelime.top'
+    },
 
   vite: {
     plugins: [MarkdownPreview()],
