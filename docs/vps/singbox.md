@@ -9,6 +9,12 @@
 - 导出配置到v2rayN
 - 出站路由尽量在客户端完成
 :::
+
+## 客户端推荐
+- `Widnows/MacOS`: [V2rayN](https://github.com/2dust/v2rayNG/releases)
+- `Android`: [Nekobox](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases) / [v2rayNG](https://github.com/2dust/v2rayNG/releases)
+- `iOS`: 小火箭
+
 ## 协议选择
 reality目前选择最多的tls模式，优势无需多言。默认自签名tls也是带加密的所有使用这种组合既有TCP又有UDP，兼容速度。
 - vless + reality
