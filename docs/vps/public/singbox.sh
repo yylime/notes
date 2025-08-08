@@ -3,8 +3,8 @@
 set -e
 
 # Configuration
-REALITY_DOMAIN="www.bing.com"  # Used only as handshake server
-HY2_DOMAIN="www.bing.com"
+REALITY_DOMAIN="www.apple.com"  # Used only as handshake server
+HY2_DOMAIN="www.apple.com"
 CONFIG_DIR="/etc/singbox-dual"
 VLESS_PORT=2445
 HY2_PORT=2446
@@ -25,7 +25,7 @@ openssl req -x509 -nodes -days 365 -newkey rsa:4096 \
 
 
 # Install sing-box using official script
-curl -fsSL https://sing-box.app/install.sh | sh -s -- --beta
+curl -fsSL https://sing-box.app/install.sh | sh
 
 # Generate UUID
 UUID=$(cat /proc/sys/kernel/random/uuid)
@@ -105,10 +105,6 @@ cat > "$CONFIG_DIR/config.json" <<EOF
       "type": "block",
       "tag": "block"
     },
-    "domain_resolver": {
-        "server": "local",
-        "strategy": "prefer_ipv4"
-    }
   ]
 }
 EOF
