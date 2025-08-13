@@ -9,6 +9,9 @@
 - 导出配置到v2rayN
 - 出站路由尽量在客户端完成
 :::
+::: warning
+最近测试发现 `reality` 似乎工作起来并不完美
+:::
 
 ## 客户端推荐
 - `Widnows/MacOS`: [V2rayN](https://github.com/2dust/v2rayNG/releases)
@@ -33,8 +36,8 @@ bash <(curl -fsSL https://raw.githubusercontent.com/yylime/notes/main/docs/vps/p
 set -e
 
 # Configuration
-REALITY_DOMAIN="www.bing.com"  # Used only as handshake server
-HY2_DOMAIN="www.bing.com"
+REALITY_DOMAIN="www.apple.com"  # Used only as handshake server
+HY2_DOMAIN="www.apple.com"
 CONFIG_DIR="/etc/singbox-dual"
 VLESS_PORT=2445
 HY2_PORT=2446

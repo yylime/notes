@@ -3,8 +3,8 @@
 set -e
 
 # Configuration
-REALITY_DOMAIN="www.apple.com"  # Used only as handshake server
-HY2_DOMAIN="www.apple.com"
+REALITY_DOMAIN="yahoo.com"  # Used only as handshake server
+HY2_DOMAIN="yahoo.com"
 CONFIG_DIR="/etc/singbox-dual"
 VLESS_PORT=2445
 HY2_PORT=2446
