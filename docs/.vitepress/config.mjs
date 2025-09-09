@@ -84,7 +84,7 @@ export default defineConfig({
   },
 
   sitemap: {
-      hostname: 'https://limelime.top'
+      hostname: 'https://yylime.com'
     },
 
   vite: {
