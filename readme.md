@@ -11,7 +11,8 @@
     - Bandwagon_NODESEEK-MEGABOX-PRO
 
 # 访问地址
-- [https://limelime.top](https://limelime.top)
+- [https://yylime.com](https://yylime.com)
+- [https://blog.yylime.com](https://blog.yylime.com)
 
 
 模板参考: [maomao](https://github.com/maomao1996/vitepress-nav-template)
