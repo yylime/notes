@@ -9,6 +9,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 { text: '3a认证服务器', link: '/network/tacas-ng' },
                 { text: '使用Rust连接交换机', link: '/network/rust' }
             ]
+        },
+        {
+            text: '项目',
+            items: [
+                { text: 'switch magager', link: '/network/switch-manager' },
+            ]
         }
     ],
     '/life/': [
