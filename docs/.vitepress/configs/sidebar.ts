@@ -17,6 +17,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
         }
     ],
+    '/problems/': [
+        {
+            text: '日常维护',
+            items: [
+                { text: '常见问题', link: '/problems/index' },
+            ]
+        }
+    ],
     '/life/': [
         {
             text: '生活随笔',
