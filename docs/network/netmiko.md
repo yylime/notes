@@ -632,6 +632,56 @@ def parse_huawei_arp(arp_text: str) -> List[Dict[str, str]]:
 ```
 :::
 
+### DHCP 信息解析
+2025-12-30接到一个工作内容，统计所有接入设备网关的dns信息，所以需要解析对应的dhcp信息进行统计，这里给出textfsm模板，对dhcp中的name，vrf，gateway，dns进行解析。
+
+当然可以根据自己需求增加额外字段的匹配，这里需要注意的是dns是一个长字符串，后续需要使用python对其额外分割解析。
+
+::: code-group
+
+```python [cisco_ios.textfsm]
+Value Required VLAN (\S+)
+Value VRF (\S+)
+Value Required GATEWAY (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value Required DNS (.+)
+
+Start
+  ^ip dhcp pool ${VLAN}
+  ^\s+vrf ${VRF}
+  ^\s+dns-server\s+${DNS}
+  ^\s+default-router ${GATEWAY}
+  ^! -> Record
+```
+
+```python [huawei.textfsm]
+Value Required VLAN (\S+)
+Value VRF (\S+)
+Value Required GATEWAY (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value Required DNS (.+)
+
+Start
+  ^interface\s+${VLAN}
+  ^\s+ip\s+binding\s+vpn-instance\s+${VRF}
+  ^\s+ip\s+address\s+${GATEWAY}\s+.*
+  ^\s+dhcp\s+server\s+dns-list\s+${DNS}
+  ^# -> Record
+```
+
+```python [h3c.textfsm]
+Value Required VLAN (\S+)
+Value VRF (\S+)
+Value Required GATEWAY (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Value Required DNS (.+)
+
+Start
+  ^dhcp\s+server\s+ip-pool\s+${VLAN}
+  ^\s+vpn-instance\s+${VRF}
+  ^\s+gateway-list\s+${GATEWAY}
+  ^\s+dns-list\s+${DNS}
+  ^# -> Record
+```
+
+:::
 ## 常见问题
 我这里列举一下我之前遇到的问题，当然由于开发已经有近两年，太久的问题已经想不起来了QAQ，如果您有问题欢迎下方提问。
 
