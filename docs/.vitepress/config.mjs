@@ -5,11 +5,11 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 
 import { head, nav, sidebar } from './configs'
 
-const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
+// const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: "../dist",
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : "/",
+  base: "/",
 
   lang: "zh-CN",
   title: "小林子的小屋",
