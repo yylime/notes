@@ -10,6 +10,12 @@ patch run all
 dis patch-information
 ```
 
+### 华为DHCP
+```
+# reset dhcp
+reset dhcp snooping user-bind ip-address
+```
+
 ### 华为CE重置console密码
 ```
 Admin@huawei.com

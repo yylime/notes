@@ -1,0 +1,39 @@
+name: Deploy Blog
+
+on:
+  push:
+    branches: [ "main" ] # 只有推送到 main 分支时才触发部署
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8 # 或者你本地用的版本，比如 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm' # 开启缓存，下次构建快得飞起
+
+      - name: Install & Build
+        run: |
+          pnpm install
+          pnpm run build # 确保你的输出目录在 ./dist 或 ./public
+
+      - name: Deploy via rsync
+        uses: Burnett01/rsync-deployments@7.0.0
+        with:
+          # -a: 归档模式, -v: 详细输出, -z: 传输压缩, -r: 递归, --delete: 删除服务器上多余文件
+          switches: -avzr --delete 
+          path: ./dist/             # 这里改成你 pnpm build 出来的实际文件夹名称
+          remote_path: /var/www/dist # 你服务器上的博客目录
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
