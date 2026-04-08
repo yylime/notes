@@ -148,8 +148,9 @@ def paramiko_detect_stype(
         logging.info(f"[!] Detect failed for {ip}: {e}")
         return None
 ```
-### 定时任务开发
 ### 配置对比
-### 定时任务
+`backend/app/services/switches/config/diffs.py`
 ### ARP开发
+`backend/app/services/switches/arp/main.py` 基于show和正则实现的arp解析。
 ### VRF开发
+`backend/app/services/switches/config/vrfs.py` 通过读取配置文件解析。
